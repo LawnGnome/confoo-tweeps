@@ -1,0 +1,50 @@
+# Confoo tweeps
+
+This is a very small, intentionally terribly written demo site written for my
+phpdbg talk at [Confoo](http://confoo.ca).
+
+Notes on standing this up, simply so I don't forget:
+
+## Installation
+
+```sh
+docker-compose start
+composer install
+```
+
+Add these variables to `.env`:
+
+* `TWITTER_CONSUMER_KEY`
+* `TWITTER_CONSUMER_SECRET`
+* `TWITTER_ACCESS_TOKEN`
+* `TWITTER_ACCESS_TOKEN_SECRET`
+
+```sh
+php artisan vendor:publish
+php artisan migrate:install
+php artisan migrate
+```
+
+## Usage
+
+### Updating
+
+```
+php artisan tweeps:update
+```
+
+The default search is `#confoo`. To use a different search, give it as a
+parameter.
+
+### Web Interface
+
+Starting the development server:
+
+```sh
+./artisan serve --port=9000 --host=127.0.0.1
+```
+
+## Contributing
+
+This is intentionally bad. I don't really want contributions, but think you're
+awesome for wanting to.
