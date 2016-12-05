@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    $tweeps = DB::table('tweeps')->paginate(30);
+    $tweeps = DB::table('tweeps')->paginate(15);
     ob_start();
 
 ?>
